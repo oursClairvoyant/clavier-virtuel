@@ -1,3 +1,5 @@
+
+/*Infobulles pour chaque lettre du clavier virtuel */
 $(document).ready(function () {
     document.querySelectorAll('.keyboard__key').forEach(key => {
         switch (key.textContent) {
@@ -76,32 +78,6 @@ $(document).ready(function () {
             case "~ɔ":
                 document.getElementById("~ɔ").setAttribute("title", " on comme ombre");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
-        // Now do something with my button
     });
 });
