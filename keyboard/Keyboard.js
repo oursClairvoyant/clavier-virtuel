@@ -32,7 +32,7 @@ const Keyboard = {
         document.body.appendChild(this.elements.main);
 
         // Automatically use keyboard for elements with .use-keyboard-input
-        document.querySelectorAll( 'input').forEach(element => {
+        document.querySelectorAll('input').forEach(element => {
             element.addEventListener("focus", () => {
                 this.open(element.value, currentValue => {
                     element.value = currentValue;
@@ -40,13 +40,16 @@ const Keyboard = {
             });
         });
     },
+    mouseOver(x) {
+        x.style.color = "red";
+    },
 
     _createKeys() {
         const fragment = document.createDocumentFragment();
         const keyLayout = [
-            "a","z","s", "v", "f", "ʒ", "∫", "ʁ", "x", "d", "t", "b","backspace" ,
-        "n", "m", "ɲ", "ŋ", "g", "k", "ɥ", "w", "l", "j", "y", "i", "p",
-        "u", "œ", "ē", "ō", "ø", "e", "o", "ɛ", "ɔ", "~ɛ", "ã", "~ɔ","done"
+            "a", "z", "s", "v", "f", "ʒ", "∫", "ʁ", "x", "d", "t", "b", "backspace",
+            "n", "m", "ɲ", "ŋ", "g", "k", "ɥ", "w", "l", "j", "y", "i", "p",
+            "u", "œ", "ē", "ō", "ø", "e", "o", "ɛ", "ɔ", "~ɛ", "ã", "~ɔ", "done"
         ];
 
         // Creates HTML for an icon
@@ -54,18 +57,21 @@ const Keyboard = {
             return `<i class="material-icons">${icon_name}</i>`;
         };
 
+
         keyLayout.forEach(key => {
             const keyElement = document.createElement("button");
             const insertLineBreak = ["backspace", "p", "enter", "?"].indexOf(key) !== -1;
 
             // Add attributes/classes
             keyElement.setAttribute("type", "button");
+
             keyElement.classList.add("keyboard__key");
 
             switch (key) {
                 case "backspace":
                     keyElement.classList.add("keyboard__key--wide");
                     keyElement.innerHTML = createIconHTML("backspace");
+
 
                     keyElement.addEventListener("click", () => {
                         this.properties.value = this.properties.value.substring(0, this.properties.value.length - 1);
@@ -120,6 +126,9 @@ const Keyboard = {
 
                 default:
                     keyElement.textContent = key.toLowerCase();
+                    keyElement.setAttribute("id", key);
+
+
 
                     keyElement.addEventListener("click", () => {
                         this.properties.value += this.properties.capsLock ? key.toUpperCase() : key.toLowerCase();
@@ -131,9 +140,11 @@ const Keyboard = {
 
             fragment.appendChild(keyElement);
 
+
             if (insertLineBreak) {
                 fragment.appendChild(document.createElement("br"));
             }
+
         });
 
         return fragment;
@@ -173,3 +184,16 @@ const Keyboard = {
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

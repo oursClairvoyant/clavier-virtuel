@@ -7,59 +7,44 @@
     <link rel="stylesheet" href="style/Style.css">
     <link rel="stylesheet" href="keyboard/Keyboard.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 
 <body>
 
-        <div class="contact-section">
-            <div class = "container">
+    <div class="contact-section">
+        <div class="container">
             <h1>Écriture fonʒtik</h1>
-            <p>Ce questionnaire a pour but de récupérer la manière dont les gens retranscrivent des mots français par leur équivalent phonétique, 
-                pour plus d'information sur quels phonèmes correspond à quels sons nous vous invitons à regarder le <a href="https://docs.google.com/spreadsheets/d/1GSqopU4dmIyM18rh0L7FjZD2hds0OjLwDu4N09YGFCY/edit?usp=sharing">google sheets</a></p>
+            <p>Ce questionnaire a pour but de récupérer la manière dont les gens retranscrivent des mots français par
+                leur équivalent phonétique,
+                pour plus d'information sur quels phonèmes correspond à quels sons nous vous invitons à regarder le <a
+                    href="https://docs.google.com/spreadsheets/d/1GSqopU4dmIyM18rh0L7FjZD2hds0OjLwDu4N09YGFCY/edit?usp=sharing">google
+                    sheets</a></p>
 
             <form class="contact-form" action="index.html" method="post">
-                <input type="text" class="contact-form-text" name = "bleu" placeholder="Bleu">
-                <input type="text" class="contact-form-text" name = "Sauver" placeholder="Sauver">
-                <input type="text" class="contact-form-text"  name = "Français" placeholder="Français">
-                <input type="text" class="contact-form-text"  name = "Difficile" placeholder="Difficile">
-                <input type="text" class="contact-form-text"  name = "Merci" placeholder="Merci">
-                <input type="text" class="contact-form-text" name = "Ombre" placeholder="Ombre">
-                <input type="text" class="contact-form-text" name = "Gueule" placeholder="Gueule">
-                <input type="text" class="contact-form-text" name = "Travailler" placeholder="Travailler">
-                <input type="text" class="contact-form-text" name = "Cesser" placeholder="Cesser">
-                <input type="text" class="contact-form-text" name = "Tranquille" placeholder="Tranquille">
-                <input type="text" class="contact-form-text" name = "Pareil" placeholder="Pareil">
-                <input type="text" class="contact-form-text" name = "Chanter" placeholder="Chanter">
+                <input type="text" class="contact-form-text" id="bleu" placeholder="Bleu" Title=" yes life">
+                <input type="text" class="contact-form-text" name="Sauver" placeholder="Sauver">
+                <input type="text" class="contact-form-text" name="Français" placeholder="Français">
+                <input type="text" class="contact-form-text" name="Difficile" placeholder="Difficile">
+                <input type="text" class="contact-form-text" name="Merci" placeholder="Merci">
+                <input type="text" class="contact-form-text" name="Ombre" placeholder="Ombre">
+                <input type="text" class="contact-form-text" name="Gueule" placeholder="Gueule">
+                <input type="text" class="contact-form-text" name="Travailler" placeholder="Travailler">
+                <input type="text" class="contact-form-text" name="Cesser" placeholder="Cesser">
+                <input type="text" class="contact-form-text" name="Tranquille" placeholder="Tranquille">
+                <input type="text" class="contact-form-text" name="Pareil" placeholder="Pareil">
+                <input type="text" class="contact-form-text" name="Chanter" placeholder="Chanter">
 
                 <textarea class="contact-form-text" placeholder="Your message"></textarea>
-                <input type="submit" class="contact-form-btn" value="Send">
+                <input type="submit" class="contact-form-btn" value="Envoyer">
             </form>
         </div>
-        </div>
-      
-        
-
-   
+    </div>
 
 
-
-
-
-
-    <!----  <div class = "keyboard">
-    
-        <div class = "keys">
-            <button type=button class = "key">a</button>
-            <button type=button class = "key wideKey">
-                <i class = "material-icons">backspace</i>
-            </button>
-            <button type=button class = "key wideKey darkKey">
-                <i class = "material-icons">check_circle</i>
-            </button>
-
-
-        </div>
-
-    </div>-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="keyboard/Keyboard.js"></script>
+    <script src="keyboard/Tooltip.js"></script>
 </body>

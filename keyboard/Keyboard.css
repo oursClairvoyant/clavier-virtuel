@@ -7,7 +7,7 @@
     background: #700024;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     user-select: none;
-    transition: bottom 0.4s;
+    transition: bottom 0.5s;
 }
 
 .keyboard--hidden {
@@ -41,6 +41,10 @@
 
 .keyboard__key:active {
     background: rgba(255, 255, 255, 0.12);
+}
+.keyboard__key:hover {
+    background:  rgba(255, 255, 255, 0.12);
+
 }
 
 .keyboard__key--wide {
