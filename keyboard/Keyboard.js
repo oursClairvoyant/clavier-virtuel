@@ -50,7 +50,7 @@ const Keyboard = {
         const keyLayout = [
             "a", "z", "s", "v", "f", "ʒ", "∫", "ʁ", "x", "d", "t", "b", "backspace",
             "n", "m", "ɲ", "ŋ", "g", "k", "ɥ", "w", "l", "j", "y", "i", "p",
-            "u", "œ", "ē", "ō", "ø", "e", "o", "ɛ", "ɔ", "~ɛ", "ã", "~ɔ", "done"
+            "u", "œ", "ē", "ō", "ø", "e", "o", "ɛ", "ɔ", "ɛ̃", "ã", "ɔ̃", "done"
         ];
 
         // Creates HTML for an icon
@@ -127,6 +127,8 @@ const Keyboard = {
 
                 default:
                     keyElement.textContent = key.toLowerCase();
+                   
+                   
                     keyElement.setAttribute("id", key);
 
 
@@ -185,6 +187,13 @@ const Keyboard = {
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
+$(".contact-form .contact-form-text ").keydown(false);
+
+
+
+
+
+
 
 
 
