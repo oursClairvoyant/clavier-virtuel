@@ -162,13 +162,8 @@
 
   }
   span {
-    float: right;
-    color: white;
-    font-weight: bold;
-    transition: color .5s;
-    position: relative;
-    margin-right: 3%;
-    margin-top: 4%;
+  font-weight: bold;
+  
   
 
   }
@@ -180,10 +175,38 @@
 
   }
   .selectF input {
-    max-width:100px ;
+    display: block;
+    width: 100px;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background:#1a1919;
+    padding: 20px 20px;
+    outline: none;
+    color:white;
+    border-radius: 10px;
+    
+
 
 
   }
+  .selectF select{
+    display: block;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background:#1a1919;
+    padding: 20px 20px;
+    outline: none;
+    color: #ddd;
+
+    border-radius: 10px;
+
+
+
+  }
+
 
 
 
