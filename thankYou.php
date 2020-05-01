@@ -41,20 +41,30 @@ if (isset($_POST["submit"])) {
 ?>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style/Style.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merci !</title>
 </head>
 <body>
-    <div class = "container2">
-    <h1> MERCI D'AVOIR PARTICIPE !</h1>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.core.min.js"></script>
 
 
 
-</script>
-<iframe width="500" height="500" src="https://www.youtube.com/embed/AQx_KMoCgJU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+
+    <div class="jumbotron text-center">
+  <h1 class="display-3">Merci d'avoir participé !</h1>
+  <p class="lead"><strong>N'oubliez pas</strong> Ce sont les derniers jours de printemps, voici de quoi égayer votre journée.</p>
+  <hr>
+  <p>
+    Vous souhaitez refaire le questionnaire? <a href="index.html">Cliquez ici</a>
+  </p>
+  <p class="lead">
+  <iframe width="500" height="300" src="https://www.youtube.com/embed/BYUASTjanyQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+</div>
+
 </body>
 </html>
