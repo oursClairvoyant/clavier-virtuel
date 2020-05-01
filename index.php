@@ -1,39 +1,4 @@
-<?php
-$sexe = '';
-$age = "";
-$n_row = '';
-$bleu = "";
-if (isset($_POST["submit"])) {
-    $sexe = $_POST["sexe"];
-    $age = $_POST["age"];
 
-
-    $file_open = fopen("information.csv", "a");
-    $n_row = count(file("information.csv"));
-
-    $array1 = array(
-        $n_row,
-        $sexe,
-        $age
-
-
-    );
-    $array = array();
-    $id[] = $n_row;
-    foreach ($_POST as $name => $value) {
-        // Split the name into an array on each underscore.
-        //$splitString = explode("_", $name);
-        array_push($array,$name, $value);
-    }
-    $array3 = array_merge($id, $array);
-
-    fputcsv($file_open,$array3);
-}
-
-
-
-
-?>
 <!DOCTYPE html>
 
 <head>
@@ -74,7 +39,7 @@ if (isset($_POST["submit"])) {
                 sheets</a> ou passez votre curseur sur les lettres du clavier virtuel (hors mobile).</p>
 
 
-        <form class="contact-form" action="index.php" method="post">
+        <form class="contact-form" action="thankYou.php" method="post">
             <div class="selectF">
                 <h4> Vous êtes ?</h4>
                 <select name="sexe">
@@ -110,7 +75,7 @@ if (isset($_POST["submit"])) {
             <input type="text" class="contact-form-text" name="Envoyer" data-toggle="tooltip" data-placement="top" title="Envoyer" placeholder="Envoyer">
             <input type="text" class="contact-form-text" name="Glisser" data-toggle="tooltip" data-placement="top" title="Glisser" placeholder="Glisser">
             <input type="text" class="contact-form-text" name="Gagner" data-toggle="tooltip" data-placement="top" title="Gagner" placeholder="Gagner">
-            <input type="submit" name="submit" class="contact-form-btn" value="Envoyer">
+            <input type="submit" name="submit" class="contact-form-btn"  value="Envoyer">
         </form>
 
 
@@ -128,7 +93,7 @@ if (isset($_POST["submit"])) {
 
 
 
-
+    <script src="formManaging.js"></script>
     <script src="keyboard/Keyboard.js"></script>
     <script src="keyboard/Tooltip.js"></script>
 

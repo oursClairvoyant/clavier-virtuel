@@ -206,8 +206,24 @@
 
 
   }
+  h1 {
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+   
+  }
 
+.container2 {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 0;
+  display: block;
+  padding-top: 50px;
 
+}
+iframe {
+  display: block;
+}
 
 
 
