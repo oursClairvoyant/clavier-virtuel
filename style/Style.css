@@ -18,7 +18,7 @@
    
     background: #00B4DB;  /* fallback for old browsers */
     background: -webkit-linear-gradient(303deg, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(303deg, #0083B0 55%, #ddd 55%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(303deg, #c6bf31 55%, #ddd 55%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 
     max-width: 500px;
@@ -75,7 +75,7 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background:#1a1919;
+    background:	#282828;
     padding: 20px 40px;
     outline: none;
     color: #ddd;
@@ -180,7 +180,7 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background:#1a1919;
+    background:	#282828;
     padding: 20px 20px;
     outline: none;
     color:white;
@@ -196,7 +196,7 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background:#1a1919;
+    background:	#282828;
     padding: 20px 20px;
     outline: none;
     color: #ddd;
@@ -217,6 +217,14 @@
   justify-content: center;
   text-align: center;
 
+}
+.sizer {
+  width:  300px ;
+  height: 500px;
+
+}
+.embed-responsive-item {
+  width: 500px;
 }
 
 
