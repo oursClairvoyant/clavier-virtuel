@@ -48,8 +48,8 @@ const Keyboard = {
     _createKeys() {
         const fragment = document.createDocumentFragment();
         const keyLayout = [
-            "a", "z", "s", "v", "f", "ʒ", "∫", "ʁ", "x", "d", "t", "b", "backspace",
-            "n", "m", "ɲ", "ŋ", "g", "k", "ɥ", "w", "l", "j", "y", "i", "p",
+            "a", "z", "s", "v", "f", "ʒ", "∫", "ʁ", "x", "d", "t", "b","backspace",
+            "n", "m", "ɲ", "ŋ", "g", "k", "ɥ", "w", "l", "j", "y", "i", "p", 
             "u", "œ", "ē", "ō", "ø", "e", "o", "ɛ", "ɔ", "ɛ̃", "ã", "ɔ̃", "done"
         ];
 
@@ -188,6 +188,9 @@ window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
 $(".contact-form .contact-form-text ").keydown(false);
+jQuery(function() {
+    jQuery( ".contact-form-text" ).attr('readonly','readonly');
+});
 
 
 
