@@ -7,7 +7,15 @@
   body {
     margin: 0;
     padding: 0;
-    background: #ddd/*#151615*/ !important ;
+    /*#151615 !important ;*/
+     background-image: url("../img/wevy22.svg")!important;
+     background-size: cover;
+  
+ 
+  
+    
+  
+    
 
     
   
@@ -75,17 +83,17 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    border-bottom: solid 5px rgb(224, 64, 24);
-    background:	rgba(0, 0, 0, 0.7);
+    border-bottom: solid 5px #de6859;
+    background:	rgba(0, 0, 0, 0.03);
     padding: 20px 40px;
     outline: none;
-    color: #ddd;
+    color: black;
     transition: 0.5s;
     border-radius: 5px;
   }
   .contact-form-text:focus{
  
-    border-bottom: solid 5px #389421;
+    border-bottom: solid 5px #87ba4c;
   }
 
   textarea.contact-form-text{
@@ -105,7 +113,7 @@
     margin-bottom: 10px;
   }
   .contact-form-btn:hover{
-    background: #ff0034;
+    background: rgba(41, 28, 28, 0.7);
   }
   p {
     color: #151615;
@@ -184,10 +192,10 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background:	rgba(0, 0, 0, 0.7);;
+    background:	rgba(0, 0, 0, 0.03);;
     padding: 20px 20px;
     outline: none;
-    color:white;
+    color:black;
     border-radius: 10px;
     margin: auto;
 
@@ -203,10 +211,10 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background:	rgba(0, 0, 0, 0.7);;
+    background:	rgba(0, 0, 0, 0.03);;
     padding: 20px 20px;
     outline: none;
-    color: #ddd;
+    color: black;
 
     border-radius: 10px;
     margin: auto;
@@ -240,6 +248,20 @@
   float: right;
   margin-right: 20px;
 }
+#half {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  right: 0;
+ 
+  z-index: 10;
+  background-color: pink;
+  
+}
+
+
+
 
 
 
