@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+   
+ 
+    background-color: #3e4a61!important;
+    overflow: hidden;
+   
+    
+
+   
+
+   
+
+}
+
+#wrapper  {
+    width: 100%;
+  
+    
+ 
+    
+}
+body h1 {
+    padding: 30px 30px 20px;
+    font-family: 'Anton', sans-serif;
+    color: #d9dad7;
+  
+    font-size: 50px;
+    
+    text-align: center;
+}
+.container {
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+.instruction {
+    width: 100%;
+}
+
+.instruction p {
+    padding: 0px 30px 20px;
+  
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Abel', sans-serif;
+    color: #0e153a;
+ 
+    
+}
+#but {
+    background-color: #c24d2c;
+    border-color: #c24d2c;
+}
+
+#send {
+    margin-bottom: 10px;
+}
+#fiche {
+    margin-bottom: 10px;
+}
+#virtuel {
+    margin-bottom: 10px;
+}
+.container p {
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Abel', sans-serif;
+    color: #d9dad7;
+}
+h2 {
+    color : #c24d2c!important;
+}
+@media screen and (max-width: 640px) {
+    .container {
+        padding-top: 5em;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    body {
+        overflow: visible;
+    }
+    #SUPERSVG {
+        display: none;
+    }
+    #but {
+        margin-bottom: 60px;
+    }
+   
+  
+
+    
+  }
+
+
+
