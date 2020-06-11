@@ -1,102 +1,65 @@
-
-<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Questionnaire Clavier Phonétique</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style/Style.css">
-    <link rel="stylesheet" href="keyboard/Keyboard.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+   
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+   
+    <title>Instructions</title>
 </head>
 
 <body>
-
-
-
-
-
-
-
-
-
-    <div class="container">
-
-
-
-        <h1>Écriture Phonétique</h1>
-
-        <p>Ce questionnaire a pour but de récupérer la manière dont les gens retranscrivent des mots français par
-            leur équivalent phonétique,
-            pour plus d'informations sur quels phonèmes correspondent à quels sons nous vous invitons à regarder ce
-            <a href="https://docs.google.com/spreadsheets/d/1GSqopU4dmIyM18rh0L7FjZD2hds0OjLwDu4N09YGFCY/edit?usp=sharing">google
-                sheets</a> ou passez votre curseur sur les lettres du clavier virtuel (hors mobile).</p>
-
-
-        <form class="contact-form" action="thankYou.php" method="post">
-            <div class="selectF">
-                <h4> Vous êtes ?</h4>
-                <select name="sexe">
-                    <option value="Homme">Homme</option>
-                    <option value="Femme">Femme</option>
-                    <option value="Autre">Autre</option>
-                </select>
-                <h4> Votre Age ?</h4>
-                <input type="number" placeholder=Age name=age title="Utilisez le clavier virtuel!" required />
-            </div>
-
-            <h4> Remplissez le formulaire à l'aide du <span>clavier virtuel</span></h4>
-            <input type="text" class="contact-form-text" name="Bleu" data-toggle="tooltip" data-placement="top" placeholder="Bleu" title="Bleu" required>
-            <input type="text" class="contact-form-text" name="Sauver" data-toggle="tooltip" data-placement="top" title="Sauver" placeholder="Sauver" required>
-            <input type="text" class="contact-form-text" name="Français" data-toggle="tooltip" data-placement="top" title="Français" placeholder="Français" required>
-            <input type="text" class="contact-form-text" name="Difficile" data-toggle="tooltip" data-placement="top" title="Difficile" placeholder="Difficile">
-            <input type="text" class="contact-form-text" name="Merci" data-toggle="tooltip" data-placement="top" title="Merci" placeholder="Merci">
-            <input type="text" class="contact-form-text" name="Ombre" data-toggle="tooltip" data-placement="top" title="Ombre" placeholder="Ombre">
-            <input type="text" class="contact-form-text" name="Gueule" data-toggle="tooltip" data-placement="top" title="Gueule" placeholder="Gueule">
-            <input type="text" class="contact-form-text" name="Travailler" data-toggle="tooltip" data-placement="top" title="Travailler" placeholder="Travailler">
-            <input type="text" class="contact-form-text" name="Cesser" data-toggle="tooltip" data-placement="top" title="Cesser" placeholder="Cesser">
-            <input type="text" class="contact-form-text" name="Tranquille" data-toggle="tooltip" data-placement="top" title="Tranquille" placeholder="Tranquille">
-            <input type="text" class="contact-form-text" name="Pareil" data-toggle="tooltip" data-placement="top" title="Pareil" placeholder="Pareil">
-            <input type="text" class="contact-form-text" name="Chanter" data-toggle="tooltip" data-placement="top" title="Chanter" placeholder="Chanter">
-            <input type="text" class="contact-form-text" name="Toujours" data-toggle="tooltip" data-placement="top" title="Toujours"placeholder="Toujours">
-            <input type="text" class="contact-form-text" name="Voix" data-toggle="tooltip" data-placement="top" title="Voix" placeholder="Voix">
-            <input type="text" class="contact-form-text" name="Boîte" data-toggle="tooltip" data-placement="top" title="Boîte"  placeholder="Boîte">
-            <input type="text" class="contact-form-text" name="Espèce" data-toggle="tooltip" data-placement="top" title="Espèce" placeholder="Espèce">
-            <input type="text" class="contact-form-text" name="Heure" data-toggle="tooltip" data-placement="top" title="Heure"placeholder="Heure">
-            <input type="text" class="contact-form-text" name="Peur" data-toggle="tooltip" data-placement="top" title="Peur"  placeholder="Peur">
-            <input type="text" class="contact-form-text" name="Choisir" data-toggle="tooltip" data-placement="top" title="Choisir" placeholder="Choisir">
-            <input type="text" class="contact-form-text" name="Disparaître" data-toggle="tooltip" data-placement="top" title="Disparaître" placeholder="Disparaître">
-            <input type="text" class="contact-form-text" name="Envoyer" data-toggle="tooltip" data-placement="top" title="Envoyer" placeholder="Envoyer">
-            <input type="text" class="contact-form-text" name="Glisser" data-toggle="tooltip" data-placement="top" title="Glisser" placeholder="Glisser">
-            <input type="text" class="contact-form-text" name="Gagner" data-toggle="tooltip" data-placement="top" title="Gagner" placeholder="Gagner">
-            <input type="submit" name="submit" class="contact-form-btn"  value="Envoyer">
-        </form>
-
-
+   
+   
+    
+    <h1>Comment remplir le questionnaire ?</h1> 
+   
+    <div class= "container">
+    
+    <div class="bg1">
+        <svg class="bi bi-file-text" width="3em" height="3em" viewBox="0 0 16 16" fill="#d9dad7" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
+            <path fill-rule="evenodd" d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        <h2>1. Jetez un oeil à la fiche phonème</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien tellus. Suspendisse efficitur arcu non ante venenatist</p>
     </div>
-
-
-
-
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-
-    <script src="formManaging.js"></script>
-    <script src="keyboard/Keyboard.js"></script>
-    <script src="keyboard/Tooltip.js"></script>
-
-
+    <div class="bg1" id="clavier">
+        <svg class="bi bi-grid-3x3-gap-fill" width="3em" height="3em" viewBox="0 0 16 16" fill="#d9dad7" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+          </svg>
+          
+        <h2>2. Utilisez le clavier virtuel</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien tellus. Suspendisse efficitur arcu non ante venenatist</p>
+    </div>
+    <div class="bg1">
+        <svg class="bi bi-cursor-fill" id="send" width="3em" height="3em" viewBox="0 0 16 16" fill="#d9dad7" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+          </svg>
+        <h2>3. Envoyez</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien tellus. Suspendisse efficitur arcu non ante venenatist</p>
+    </div>
+    
+    <div class="but1">
+        <button type="button" onclick = "location.href = 'questionnaire.html';" class="btn btn-danger btn-lg" id="but">J'ai compris</button>
+    </div>
+    
+    </div>
+    
+    
+   
+    <svg width="100%" height="100%" id="SUPERSVG" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>
+    
+    
 
 </body>
+<script src="./script/wavify.js"></script>
+<script src="./script/scriptor.js"></script>
+
+</html>
