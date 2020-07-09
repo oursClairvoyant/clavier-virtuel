@@ -47,10 +47,168 @@ const Keyboard = {
 
     _createKeys() {
         const fragment = document.createDocumentFragment();
-        const keyLayout = [
-            "a", "z", "s", "v", "f", "ʒ", "∫", "ʁ", "x", "d", "t", "b", "backspace",
-            "n", "m", "ɲ", "ŋ", "g", "k", "ɥ", "w", "l", "j", "y", "i", "p",
-            "u", "œ", "ē", "ō", "ø", "e", "o", "ɛ", "ɔ", "ɛ̃", "ã", "ɔ̃", "done"
+        const keyLayout = [{
+            letter: "a",
+            sound: "ch(a)t"
+        },
+        {
+            letter: "z",
+            sound: "(z)éro"
+        },
+        {
+            letter: "s",
+            sound: " (s)apin"
+        },
+        {
+            letter: "v",
+            sound: " (v)ire"
+        },
+        {
+            letter: "f",
+            sound: " (f)ée"
+        },
+        {
+            letter: "ʒ",
+            sound: " ré(g)ir"
+        },
+        {
+            letter: "∫",
+            sound: " (ch)ien"
+        },
+        {
+            letter: "ʁ",
+            sound: "(r)oue"
+        },
+        {
+            letter: "x",
+            sound: "(kh)an"
+        },
+        {
+            letter: "d",
+            sound: "(d)îner"
+        },
+        {
+            letter: "t",
+            sound: "(t)hon"
+        },
+        {
+            letter: "b",
+            sound: "(b)ière"
+        },
+        {
+            letter: "backspace",
+            sound: "ø"
+        },
+        {
+            letter: "n",
+            sound: "(n)ez"
+        },
+        {
+            letter: "m",
+            sound: "(m)eme"
+        },
+        {
+            letter: "ɲ",
+            sound: "(gn)ôle"
+        },
+        {
+            letter: "ŋ",
+            sound: "swi(ng)"
+        },
+        {
+            letter: "k",
+            sound: "(c)arte"
+        },
+        {
+            letter: "ɥ",
+            sound: "y(u)an"
+        },
+        {
+            letter: "w",
+            sound: "l(ou)p"
+        },
+        {
+            letter: "l",
+            sound: "(l)ion"
+        },
+        {
+            letter: "j",
+            sound: "foui(ll)e"
+        },
+        {
+            letter: "y",
+            sound: "p(u)re"
+        },
+        {
+            letter: "i",
+            sound: "g(î)te"
+        },
+        {
+            letter: "p",
+            sound: "(p)ère"
+        },
+        {
+            letter: "u",
+            sound: " s(aou)l"
+        },
+        {
+            letter: "œ",
+            sound: "c(eu)ille"
+        },
+        {
+            letter: "ē",
+            sound: " b(a)con"
+        },
+        {
+            letter: "ō",
+            sound: "p(ô)le"
+        },
+        {
+            letter: "ø",
+            sound: "f(eu)"
+        },
+        {
+            letter: "e",
+            sound: "n(ez)"
+        },
+        {
+            letter: "o",
+            sound: "(o)r"
+        },
+        {
+            letter: "ɛ",
+            sound: "t(ai)e"
+        },
+        {
+            letter: "ɔ",
+            sound: "m(o)rt"
+        },
+
+        {
+            letter: "ɛ̃",
+            sound: "p(ain)"
+        },
+        {
+            letter: "g",
+            sound: "(gu)êpe"
+        },
+        {
+            letter: "ã",
+            sound: " l(am)pe"
+        },
+        {
+            letter: "ɔ̃",
+            sound: "(omb)re"
+        },
+
+        {
+            letter: "done",
+            sound: "ø"
+        }
+
+
+
+
         ];
 
         // Creates HTML for an icon
@@ -61,16 +219,16 @@ const Keyboard = {
 
         keyLayout.forEach(key => {
             const keyElement = document.createElement("button");
-            const insertLineBreak = ["backspace", "p", "enter", "?"].indexOf(key) !== -1;
+            const insertLineBreak = ["backspace", "p", "enter", "?"].indexOf(key.letter) !== -1;
 
             // Add attributes/classes
             keyElement.setAttribute("type", "button");
 
             keyElement.classList.add("keyboard__key");
 
-            switch (key) {
+            switch (key.letter) {
                 case "backspace":
-                    keyElement.classList.add("keyboard__key--wide");
+                    keyElement.classList.add("keyboard__key--wide", "keyboard__key--dark");
                     keyElement.innerHTML = createIconHTML("backspace");
 
 
@@ -126,15 +284,34 @@ const Keyboard = {
                     break;
 
                 default:
-                    keyElement.textContent = key.toLowerCase();
+
+                    $("#tagscloud").text(key.sound);
+                    
+                 
+                    
+                    keyElement.textContent = key.letter ;
+                    var textNode = document.createTextNode("\r\n" +key.sound);
+                    var span = document.createElement('span');
+                    span.style.fontSize = "0.7rem";
+                    span.style.color = "#ad443d";
+                    span.appendChild(textNode);
+                    keyElement.appendChild(span);
+                
+
+                   // keyElement.setAttribute("id", key.letter);
+                    keyElement.setAttribute("id", key.sound);
                    
-                   
-                    keyElement.setAttribute("id", key);
+                    
+                    keyElement.setAttribute("style", "white-space: pre;");
+                    
+
+
+
 
 
 
                     keyElement.addEventListener("click", () => {
-                        this.properties.value += this.properties.capsLock ? key.toUpperCase() : key.toLowerCase();
+                        this.properties.value += this.properties.capsLock ? key.letter.toUpperCase() : key.letter.toLowerCase();
                         this._triggerEvent("oninput");
                     });
 
@@ -149,7 +326,6 @@ const Keyboard = {
             }
 
         });
-
         return fragment;
     },
 
@@ -188,6 +364,9 @@ window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
 $(".contact-form .contact-form-text ").keydown(false);
+jQuery(function () {
+    jQuery(".contact-form-text").attr('readonly', 'readonly');
+});
 
 
 
